@@ -1,0 +1,134 @@
+﻿<Window x:Class="BorAha.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BorAha"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800" WindowState="Maximized" WindowStyle="None">
+    <Grid>
+        <Viewbox>
+            <Canvas Width="800" Height="450">
+                <Label Name="count" Canvas.Left="22" Canvas.Top="25"></Label>
+                <Button Canvas.Left="214" FontSize="30" Content="Завершить тестирование" BorderBrush="Black" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="395" Click="Button_Click" >
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20"></Setter>
+                            <Setter Property="BorderBrush" Value="Black"></Setter>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                </Button>
+                <Button Width="50" Height="50" Canvas.Left="735" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click_1" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/free-icon-logout-660350.png"/>
+                    </Button.Background>
+                </Button>
+                <ScrollViewer CanContentScroll="True" Height="300" Width="800" HorizontalAlignment="Center" Canvas.Left="0" VerticalAlignment="Top" Canvas.Top="81">
+                    <Grid>
+                        <StackPanel>
+                            <GroupBox x:Name="Q1" Header="1. Укажите неверные варианты описания синтаксиса тега SCRIPТ :">
+                                <StackPanel>
+                                    <CheckBox x:Name="T1">а) &lt;script name="язык программирования">текст программы&lt;script&gt;
+                                    </CheckBox>
+                                    <CheckBox x:Name="T20">б) &lt;script type="тип документа">текст программы&lt;script&gt;</CheckBox>
+                                    <CheckBox>в) &lt;script type="тип языка программирования">текст программы&lt;script&gt;</CheckBox>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="2. Модем — это">
+                                <StackPanel>
+                                    <RadioButton>а) постоянное соединение по оптоволоконному каналу</RadioButton>
+                                    <RadioButton x:Name="T2">б) терминальное соединение по коммутируемому телефонному каналу</RadioButton>
+                                    <RadioButton>в) удаленный доступ по коммутируемому телефонному каналу</RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="3. Модем, передающий информацию со скоростью 28 800 бит/с, может передать две страницы текста (3 600 байт) в течение:">
+                                <StackPanel>
+                                    <RadioButton>а) 1 минуты</RadioButton>
+                                    <RadioButton>б) 1 дня</RadioButton>
+                                    <RadioButton x:Name="T3">в) 1 секунды</RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="4. Электронная почта (e-mail) позволяет передавать:">
+                                <StackPanel>
+                                    <RadioButton x:Name="T4">а) сообщения и приложенные файлы</RadioButton>
+                                    <RadioButton>б) только файлы</RadioButton>
+                                    <RadioButton>в) видеоизображения</RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="5. Какой протокол является базовым в Интернет:">
+                                <StackPanel>
+                                    <RadioButton>а) HTML</RadioButton>
+                                    <RadioButton>б) HTTP</RadioButton>
+                                    <RadioButton x:Name="T5">в) TCP/IP</RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="6. Компьютер, подключенный к Интернет, обязательно имеет:">
+                                <StackPanel>
+                                    <RadioButton>а) Web-сервер</RadioButton>
+                                    <RadioButton x:Name="T6">б) IP-адрес</RadioButton>
+                                    <RadioButton>в) доменное имя</RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="7. Гиперссылки на web — странице могут обеспечить переход:">
+                                <StackPanel>
+                                    <RadioButton>а) на любую web — страницу данного региона</RadioButton>
+                                    <RadioButton>б) только в пределах данной web — страницы</RadioButton>
+                                    <RadioButton x:Name="T7">в) на любую web — страницу любого сервера Интернет</RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="8. Задан адрес электронной почты в сети Internet: user_name@int.glasnet.ru. Каково имя владельца электронного адреса:">
+                                <StackPanel>
+                                    <RadioButton x:Name="T8">а) user_name</RadioButton>
+                                    <RadioButton>б) ru</RadioButton>
+                                    <RadioButton >в) glasnet.ru</RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="9. Браузеры (например, Microsoft Internet Explorer) являются:">
+                                <StackPanel>
+                                    <RadioButton>а) трансляторами языка программирования</RadioButton>
+                                    <RadioButton>б) антивирусными программами</RadioButton>
+                                    <RadioButton x:Name="T9">в) средством просмотра web-страниц</RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="10. Web-страницы имеют формат (расширение):">
+                                <StackPanel>
+                                    <RadioButton>а) *.doc</RadioButton>
+                                    <RadioButton x:Name="T10">б) *.html</RadioButton>
+                                    <RadioButton>в) *.exe</RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox x:Name="Q11" Header="11. Как указать выравнивание текста в ячейке таблицы? :">
+                                <StackPanel>
+                                    <CheckBox x:Name="T11">а) с помощью атрибута CELLPАDDING</CheckBox>
+                                    <CheckBox x:Name="T12">б) с помощью атрибута VАLIGN</CheckBox>
+                                    <CheckBox>в) с помощью атрибута АLIGN</CheckBox>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox x:Name="Q12" Header="12. Какие значения атрибута АLIGN используются для определения положения изображения относительно окружающего текста? :">
+                                <StackPanel>
+                                    <CheckBox x:Name="T13">а) lеft</CheckBox>
+                                    <CheckBox x:Name="T14">б) bottom</CheckBox>
+                                    <CheckBox x:Name="T15">в) bаsеlinе</CheckBox>
+                                    <CheckBox x:Name="T16">в) right</CheckBox>
+                                    <CheckBox x:Name="T17">в) toр</CheckBox>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox x:Name="Q13" Header="13. В каких примерах правильно организован синтаксис тега ВАSE? :">
+                                <StackPanel>
+                                    <CheckBox x:Name="T18">а) &lt;base href=""&lt;а&gt;"httр://www.аlехfinе.ru/intro.html" ТАRGEТ=nеw&gt;
+                                    </CheckBox>
+                                    <CheckBox >б) &lt;base a="" href="аlехfinе.ru/intro.html"&gt;
+                                    </CheckBox>
+                                    <CheckBox x:Name="T19">в) &lt;base href=""&lt;а&gt;"httр://www.аlехfinе.ru/intro.html"&gt;</CheckBox>
+                                </StackPanel>
+                            </GroupBox>
+                        </StackPanel>
+                    </Grid>
+                </ScrollViewer>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</Window>

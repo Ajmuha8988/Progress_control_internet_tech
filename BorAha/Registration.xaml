@@ -1,0 +1,40 @@
+﻿<Window x:Class="BorAha.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BorAha"
+        mc:Ignorable="d"
+        Title="Registration" Height="650" Width="450" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Viewbox>
+            <Canvas Width="400" Height="650">
+                <Button FontSize="40" Background="White" BorderBrush="White" Canvas.Left="370" Click="Button_Click_1" >X</Button>
+                <Label Canvas.Top="50" FontSize="40" HorizontalContentAlignment="Center" Width="400">Регистрация</Label>
+                <Label Width="400" FontSize="30" HorizontalContentAlignment="Left" Canvas.Top="120">ФИО</Label>
+                <Border CornerRadius="5" BorderThickness="1" BorderBrush="Black" Canvas.Top="170">
+                    <TextBox Name="FIO" Background="Transparent" BorderThickness="0" FontSize="30" Width="400" />
+                </Border>
+                <Label Width="400" FontSize="30" HorizontalContentAlignment="Left" Canvas.Top="210" Content="Почта" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Border CornerRadius="5" BorderThickness="1" BorderBrush="Black" Canvas.Top="260">
+                    <TextBox Name="Email" Background="Transparent" BorderThickness="0" FontSize="30" Width="400" />
+                </Border>
+                <Label Width="400" FontSize="30" HorizontalContentAlignment="Left" Canvas.Top="300" Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Border CornerRadius="5" BorderThickness="1" BorderBrush="Black" Canvas.Top="350">
+                    <PasswordBox Name="password" Background="Transparent" BorderThickness="0" FontSize="30" Width="400" />
+                </Border>
+                <Label Width="400" FontSize="30" HorizontalContentAlignment="Left" Canvas.Top="390" Content="Потвердить пароль" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Border CornerRadius="5" BorderThickness="1" BorderBrush="Black" Canvas.Top="440">
+                    <PasswordBox Name="ConfirmPassword" Background="Transparent" BorderThickness="0" FontSize="30" Width="400" />
+                </Border>
+                <Button Canvas.Top="500" Width="400" FontSize="40" Content="Зарегистрироваться" BorderBrush="Black" Background="Orange" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</Window>

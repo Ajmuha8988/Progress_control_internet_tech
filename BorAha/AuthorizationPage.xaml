@@ -1,0 +1,33 @@
+﻿<Window x:Class="BorAha.AuthorizationPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BorAha"
+        mc:Ignorable="d"
+        Title="AuthorizationPage" Height="450" Width="450" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Viewbox>
+            <Canvas Width="400" Height="450">
+                <Button FontSize="40" Background="White" BorderBrush="White" Canvas.Left="370" Click="Button_Click_1" >X</Button>
+                <Label Canvas.Top="50" FontSize="40" HorizontalContentAlignment="Center" Width="400">Но</Label>
+                <Label Width="400" FontSize="40" HorizontalContentAlignment="Center" Canvas.Top="90">сперва нужно</Label>
+                <Button Canvas.Top="180" Canvas.Left="100" Width="200" FontSize="40" Content="Войти" BorderBrush="Black" Background="#003770" Foreground="White" Click="Button_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Label Width="400" FontSize="40" HorizontalContentAlignment="Center" Canvas.Top="250">либо</Label>
+                <Button Canvas.Top="340"  Width="400" FontSize="40" Content="Зарегистрироваться" BorderBrush="Black" Background="Orange" Foreground="White" Click="Button_Click_2" HorizontalAlignment="Left" Canvas.Left="-2" VerticalAlignment="Center">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</Window>
